@@ -18,12 +18,11 @@
 
 import sys
 
-PYSIDE2 = 'PySide2'
 PYSIDE6 = 'PySide6'
 PYQT5 = 'PyQt5'
 QT_ENV = None
 
-libs = [PYSIDE2, PYSIDE6, PYQT5]
+libs = [PYSIDE6, PYQT5]
 for lib in libs:
     if lib in sys.modules:
         QT_ENV = lib
@@ -42,8 +41,6 @@ if QT_ENV is None:
 
 if QT_ENV == PYQT5:
     from PyQt5 import QtGui, QtCore, QtWidgets
-elif QT_ENV == PYSIDE2:
-    from PySide2 import QtGui, QtCore, QtWidgets
 elif QT_ENV == PYSIDE6:
     from PySide6 import QtGui, QtCore, QtWidgets
 

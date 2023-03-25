@@ -1,3 +1,17 @@
+[tool.poetry]
+name = "qtutils"
+version = "3.0.1"
+description = "PySide6/PyQt5 abstraction layer, mulithreading and UI loader utilities, icon set, and more. This was updated to support pyside6 instead of PySide2. Support for pyside2 was removed entirely because at the time, pyside2 did not support python 3.11."
+authors = ["Daniel Gleason <danielpgleason@icloud.com>"]
+license = "2-clause BSD, 3-clause BSD (see LICENSE.TXT for full conditions)"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.11.2"
+pyside6 = {version = "^6.4.3", optional = true}
+pyqt5 = {version = "^5.15.9", optional = true}
+
+
 [build-system]
-requires = ["setuptools", "wheel", "setuptools_scm", "PyQt5", "PySide2"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

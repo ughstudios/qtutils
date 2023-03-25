@@ -25,8 +25,8 @@ class UiLoaderUnknownWidgetException(Exception):
     pass
 
 
-if qtutils.qt.QT_ENV in [qtutils.qt.PYSIDE2]:
-    from PySide2.QtUiTools import QUiLoader
+if qtutils.qt.QT_ENV in [qtutils.qt.PYSIDE6]:
+    from PySide6.QtUiTools import QUiLoader
 
     class UiLoader(QUiLoader):
         """
@@ -50,7 +50,6 @@ if qtutils.qt.QT_ENV in [qtutils.qt.PYSIDE2]:
             self._custom_widgets = {}
             self._promotions = {}
             self.toplevel_instance = None
-
         def registerCustomWidget(self, class_):
             """
             Register a class with the UiLoader that has been used with Qt Designers

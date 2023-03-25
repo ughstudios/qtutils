@@ -11,7 +11,6 @@
 # for the full license.                                             #
 #                                                                   #
 #####################################################################
-from .__version__ import __version__
 from qtutils.qt.QtCore import qInstallMessageHandler
 from qtutils.locking import qtlock
 
